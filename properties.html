@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Business</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="https://cdn.glitch.global/e2081ffb-88b9-4a6a-99f1-550a785a48b6/download%20(5).png?v=1726634968142"
+                    alt="Srini Property Services Company Logo" title="Srini Property Services Logo" height="50px" loading="lazy">
+                <h1><strong> Srini Property Services</strong></h1>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"> <strong> Home </strong></a></li>
+            <li><a href="properties.html"> <strong> Services</strong></a></li>
+            <li><a href="about.html"> <strong> About Us </strong></a></li>
+            <li><a href="contact.html"> <strong> Contact </strong></a></li>
+
+        </ul>
+        <button class="menu-btn" id="menu-btn">&#9776;</button>
+    </nav>
+    <div class="side-nav" id="side-nav">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <ul class="side-nav-links">
+            <li><a href="index.html"> <strong> Home</strong></a></li>
+            <li><a href="properties.html"> <strong> Services</strong></a></li>
+            <li><a href="about.html"> <strong> About Us </strong></a></li>
+            <li><a href="contact.html"> <strong> Contact</strong></a></li>
+
+        </ul>
+    </div>
+    <section class="services-offered-section">
+        <div class="container revealUp">
+            <h2 class="section-title">Facilitating Services to NRIs</h2>
+            <ul class="services-list">
+                <li>Rental and Maintenance Services</li>
+                <li>All Government works</li>
+                <li>Civil works</li>
+                <li>Selling and Buying properties process</li>
+                <li>Updating properties licenses with Govt departments</li>
+                <li>Construction team providing and all</li>
+
+            </ul>
+        </div>
+    </section>
+
+    <div class="properties-container">
+        <div class="tabs">
+            <button class="tab-link active" onclick="filterProperties('FarmHouses')">Farm Houses</button>
+            <button class="tab-link" onclick="filterProperties('PrefabHouses')">Prefab Houses</button>
+            <button class="tab-link" onclick="filterProperties('SpaceCapsuleHouses')">Space Capsule Houses</button>
+            <button class="tab-link" onclick="filterProperties('ContainerHouses')">Container Houses</button>
+            <button class="tab-link" onclick="filterProperties('AeroconDrywallConstructions')">Aerocon Drywall
+                Constructions</button>
+        </div>
+        <div class="dropdown" id="tab-dropdown">
+            <p>Select Services</p>
+            <select id="property-type-dropdown" onchange="filterPropertiesDropdown()">
+
+                <option value="FarmHouses">Farm Houses</option>
+                <option value="PrefabHouses">Prefab Houses</option>
+                <option value="SpaceCapsuleHouses">Space Capsule Houses</option>
+                <option value="ContainerHouses">Container Houses</option>
+                <option value="AeroconDrywallConstructions">Aerocon Drywall Constructions</option>
+            </select>
+        </div>
+
+        <div class="property-list">
+            <div class="property-card FarmHouses">
+                <img src="https://cdn.glitch.global/e2081ffb-88b9-4a6a-99f1-550a785a48b6/11.jpg?v=1724503523347"
+                    alt="Farm House 1" class="property-image">
+                <h2 class="property-title">Farm House 1</h2>
+                <p class="property-bedrooms">3 Bedrooms</p>
+                <!--                 <button>ARRANGE A VIEWING</button> -->
+                <br>
+
+                <a href="contact.html">ARRANGE A VIEWING</a>
+                <br>
+                <br>
+
+            </div>
+            <div class="property-card FarmHouses">
+                <img src="https://cdn.glitch.global/e2081ffb-88b9-4a6a-99f1-550a785a48b6/10.webp?v=1724503473536"
+                    alt="Farm House 1" class="property-image">
+                <h2 class="property-title">Farm House 1</h2>
+                <p class="property-bedrooms">3 Bedrooms</p>
+                <br>
+
+                <a href="contact.html">ARRANGE A VIEWING</a>
+                <br>
+                <br>
+            </div>
+            <div class="property-card FarmHouses">
+                <img src="https://cdn.glitch.global/e2081ffb-88b9-4a6a-99f1-550a785a48b6/10.jpg?v=1724503485092"
+                    alt="Farm House 1" class="property-image">
+                <h2 class="property-title">Farm House 1</h2>
+                <p class="property-bedrooms">3 Bedrooms</p>
+                <br>
+
+                <a href="contact.html">ARRANGE A VIEWING</a>
+                <br>
+                <br>
+            </div>
+
+            <div class="property-card PrefabHouses">
+                <img src="https://cdn.glitch.global/e2081ffb-88b9-4a6a-99f1-550a785a48b6/prefab1.jpg?v=1726468585470"
+                    alt="Prefab House 1" class="property-image">
+                <h2 class="property-title">Prefab House 1</h2>
+                <p class="property-bedrooms">2 Bedrooms</p>
+                <br>
+
+                <a href="contact.html">ARRANGE A VIEWING</a>
+                <br>
+                <br>
+            </div>
+            <div class="property-card PrefabHouses">
+                <img src="https://cdn.glitch.global/e2081ffb-88b9-4a6a-99f1-550a785a48b6/prefab2.jpg?v=1726468590372"
+                    alt="Prefab House 1" class="property-image">
+                <h2 class="property-title">Prefab House 1</h2>
+                <p class="property-bedrooms">2 Bedrooms</p>
+                <br>
+
+                <a href="contact.html">ARRANGE A VIEWING</a>
+                <br>
+                <br>
+            </div>
+            <div class="property-card PrefabHouses">
+                <img src="https://cdn.glitch.global/e2081ffb-88b9-4a6a-99f1-550a785a48b6/prefab3.jpg?v=1726468598602"
+                    alt="Prefab House 1" class="property-image">
+                <h2 class="property-title">Prefab House 1</h2>
+                <p class="property-bedrooms">2 Bedrooms</p>
+                <br>
+
+                <a href="contact.html">ARRANGE A VIEWING</a>
+                <br>
+                <br>
+            </div>
+
+            <div class="property-card SpaceCapsuleHouses">
+                <img src="https://cdn.glitch.global/e2081ffb-88b9-4a6a-99f1-550a785a48b6/spacecaps1.jpg?v=1726468607677"
+                    alt="Space Capsule House 1" class="property-image">
+                <h2 class="property-title">Space Capsule House 1</h2>
+                <p class="property-bedrooms">1 Bedroom</p>
+                <br>
+
+                <a href="contact.html">ARRANGE A VIEWING</a>
+                <br>
+                <br>
+            </div>
+            <div class="property-card SpaceCapsuleHouses">
+                <img src="https://cdn.glitch.global/e2081ffb-88b9-4a6a-99f1-550a785a48b6/spacecaps2.jpg?v=1726468614949"
+                    alt="Space Capsule House 1" class="property-image">
+                <h2 class="property-title">Space Capsule House 1</h2>
+                <p class="property-bedrooms">1 Bedroom</p>
+                <br>
+
+                <a href="contact.html">ARRANGE A VIEWING</a>
+                <br>
+                <br>
+            </div>
+            <div class="property-card SpaceCapsuleHouses">
+                <img src="https://cdn.glitch.global/e2081ffb-88b9-4a6a-99f1-550a785a48b6/spacecaps3.jpg?v=1726468621801"
+                    alt="Space Capsule House 1" class="property-image">
+                <h2 class="property-title">Space Capsule House 1</h2>
+                <p class="property-bedrooms">1 Bedroom</p>
+                <br>
+
+                <a href="contact.html">ARRANGE A VIEWING</a>
+                <br>
+                <br>
+            </div>
+
+            <div class="property-card ContainerHouses">
+                <img src="https://cdn.glitch.global/e2081ffb-88b9-4a6a-99f1-550a785a48b6/container1.jpg?v=1726468551585"
+                    alt="Container House 1" class="property-image">
+                <h2 class="property-title">Container House 1</h2>
+                <p class="property-bedrooms">2 Bedrooms</p>
+                <br>
+
+                <a href="contact.html">ARRANGE A VIEWING</a>
+                <br>
+                <br>
+            </div>
+            <div class="property-card ContainerHouses">
+                <img src="https://cdn.glitch.global/e2081ffb-88b9-4a6a-99f1-550a785a48b6/container2.jpg?v=1726468556419"
+                    alt="Container House 1" class="property-image">
+                <h2 class="property-title">Container House 1</h2>
+                <p class="property-bedrooms">2 Bedrooms</p>
+                <br>
+
+                <a href="contact.html">ARRANGE A VIEWING</a>
+                <br>
+                <br>
+            </div>
+            <div class="property-card ContainerHouses">
+                <img src="https://cdn.glitch.global/e2081ffb-88b9-4a6a-99f1-550a785a48b6/container3.jpg?v=1726468564978"
+                    alt="Container House 1" class="property-image">
+                <h2 class="property-title">Container House 1</h2>
+                <p class="property-bedrooms">2 Bedrooms</p>
+                <br>
+
+                <a href="contact.html">ARRANGE A VIEWING</a>
+                <br>
+                <br>
+            </div>
+
+            <div class="property-card AeroconDrywallConstructions">
+                <img src="https://cdn.glitch.global/e2081ffb-88b9-4a6a-99f1-550a785a48b6/aerocon1.jpg?v=1726468510148"
+                    alt="Aerocon Drywall Construction 1" class="property-image">
+                <h2 class="property-title">Aerocon Drywall Construction 1</h2>
+                <p class="property-bedrooms">4 Bedrooms</p>
+                <br>
+
+                <a href="contact.html">ARRANGE A VIEWING</a>
+                <br>
+                <br>
+            </div>
+            <div class="property-card AeroconDrywallConstructions">
+                <img src="https://cdn.glitch.global/e2081ffb-88b9-4a6a-99f1-550a785a48b6/aerocon2.jpg?v=1726468531658"
+                    alt="Aerocon Drywall Construction 1" class="property-image">
+                <h2 class="property-title">Aerocon Drywall Construction 1</h2>
+                <p class="property-bedrooms">4 Bedrooms</p>
+                <br>
+
+                <a href="contact.html">ARRANGE A VIEWING</a>
+                <br>
+                <br>
+            </div>
+            <div class="property-card AeroconDrywallConstructions">
+                <img src="https://cdn.glitch.global/e2081ffb-88b9-4a6a-99f1-550a785a48b6/aerocon3.jpg?v=1726468537437"
+                    alt="Aerocon Drywall Construction 1" class="property-image">
+                <h2 class="property-title">Aerocon Drywall Construction 1</h2>
+                <p class="property-bedrooms">4 Bedrooms</p>
+                <br>
+
+                <a href="contact.html">ARRANGE A VIEWING</a>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <a href="https://www.instagram.com/srinipropertyservices?igsh=MWtqdW1hdjY0YWNteA==" class="instagram-button"
+        rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+            title="Follow us on Instagram" loading="lazy">
+        <!-- Follow us -->
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61564939513233&mibextid=ZbWKwL" class="facebook-button"
+        rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"
+            title="Follow us on Facebook" loading="lazy">
+        <!-- Follow us -->
+    </a>
+    <a href="https://wa.me/+919849870255" class="whatsapp-button" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+            title="Contact Us via WhatsApp" loading="lazy">
+        <!--         Chat with us -->
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Real Estate Business. All rights reserved.</p>
+    </footer>
+    <script>
+        // Call this function when the page loads to filter properties by 'FarmHouses'
+        window.onload = function () {
+            filterProperties('FarmHouses');
+        };
+        function filterPropertiesDropdown() {
+            var category = document.getElementById("property-type-dropdown").value;
+            filterProperties(category);
+        }
+
+
+        function filterProperties(type) {
+            const cards = document.querySelectorAll('.property-card');
+            const tabs = document.querySelectorAll('.tab-link');
+
+            // Set active class on the clicked tab
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.querySelector(`.tab-link[onclick="filterProperties('${type}')"]`).classList.add('active');
+
+            // Display properties based on selected type
+            cards.forEach(card => {
+                if (type === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = card.classList.contains(type) ? 'block' : 'none';
+                }
+            });
+        }
+    </script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray(".revealUp").forEach(function (elem) {
+            ScrollTrigger.create({
+                trigger: elem,
+                start: "top 80%",
+                end: "bottom 20%",
+                onEnter: function () {
+                    gsap.fromTo(elem, { y: 100, autoAlpha: 0 }, {
+                        duration: 1.25,
+                        y: 0,
+                        autoAlpha: 1,
+                        ease: "back",
+                        overwrite: "auto"
+                    });
+                },
+                onLeave: function () {
+                    gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+                },
+                onEnterBack: function () {
+                    gsap.fromTo(elem, { y: -100, autoAlpha: 0 }, {
+                        duration: 1.25,
+                        y: 0,
+                        autoAlpha: 1,
+                        ease: "back",
+                        overwrite: "auto"
+                    });
+                },
+                onLeaveBack: function () {
+                    gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+                }
+            });
+        });
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const sideNav = document.getElementById('side-nav');
+
+        menuBtn.addEventListener('click', () => {
+            sideNav.style.left = '0';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sideNav.style.left = '-100%';
+        });
+    </script>
+</body>
+
+</html>
