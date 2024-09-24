@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Business</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="https://cdn.glitch.global/e2081ffb-88b9-4a6a-99f1-550a785a48b6/download%20(5).png?v=1726634968142"
+                    alt="Srini Property Services Company Logo" title="Srini Property Services Logo" height="50px" loading="lazy">
+                <h1><strong> Srini Property Services</strong></h1>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"> <strong> Home </strong></a></li>
+            <li><a href="properties.html"> <strong> Services</strong></a></li>
+            <li><a href="about.html"> <strong> About Us </strong></a></li>
+            <li><a href="contact.html"> <strong> Contact </strong></a></li>
+
+        </ul>
+        <button class="menu-btn" id="menu-btn">&#9776;</button>
+    </nav>
+    <div class="side-nav" id="side-nav">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <ul class="side-nav-links">
+            <li><a href="index.html"> <strong> Home</strong></a></li>
+            <li><a href="properties.html"> <strong> Services</strong></a></li>
+            <li><a href="about.html"> <strong> About Us </strong></a></li>
+            <li><a href="contact.html"> <strong> Contact</strong></a></li>
+
+        </ul>
+    </div>
+
+    <div class="our-team-section">
+        <div class="our-team-title">
+            <h2>ABOUT US</h2>
+        </div>
+        <div class="our-team-content">
+            <p>We are a leading real estate company dedicated to helping you find your perfect home. With years of
+                experience and a commitment to customer satisfaction, we provide personalized services to meet your
+                needs.
+            </p>
+        </div>
+    </div>
+    <div class="our-team-section">
+        <div class="our-team-title">
+            <h2>Goods and <br> Services <br> Tax <br> Information</h2>
+        </div>
+        <div class="our-team-content">
+            <p><strong>Goods and Services Tax Identification Number:</strong> 37ARMPT7041F2ZE</p>
+            <p><strong>Details of Additional Place of Business(s):</strong></p>
+            <p><strong>Legal Name:</strong> TALASILA VASUMATI</p>
+            <p><strong>Trade Name, if any:</strong> Srini Infra Real Estate & Property Management Services</p>
+            <p><strong>Total Number of Additional Places of Business in the State:</strong> 0</p>
+        </div>
+    </div>
+
+    <!-- Insert this content in the "Content for each page will go here" section -->
+    <div class="our-team-section">
+        <div class="our-team-title">
+            <h2>MEET OUR TEAM</h2>
+        </div>
+        <div class="our-team-content">
+            <p>
+                At the heart of our company lies a team of passionate professionals dedicated to bringing your vision to
+                life.
+                We pride ourselves on delivering exceptional services tailored to meet your needs. Our team’s diverse
+                expertise
+                spans various industries, ensuring innovative solutions for every project.
+            </p>
+            <p>
+                What sets us apart is not just our expertise, but our commitment to understanding and embracing each
+                client's unique goals.
+                Whether it's strategizing, building, or delivering, our team works hand-in-hand with you to ensure success
+                every step of the way.
+                Our collaborative culture and customer-first approach make us a reliable partner in your journey.
+            </p>
+        </div>
+    </div>
+
+
+
+
+    <a href="https://www.instagram.com/srinipropertyservices?igsh=MWtqdW1hdjY0YWNteA==" class="instagram-button"
+        rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+            title="Follow us on Instagram" loading="lazy">
+        <!-- Follow us -->
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61564939513233&mibextid=ZbWKwL" class="facebook-button"
+        rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"
+            title="Follow us on Facebook" loading="lazy">
+        <!-- Follow us -->
+    </a>
+    <a href="https://wa.me/+919849870255" class="whatsapp-button" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+            title="Contact Us via WhatsApp" loading="lazy">
+        <!--         Chat with us -->
+    </a>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Real Estate Business. All rights reserved.</p>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray(".revealUp").forEach(function (elem) {
+            ScrollTrigger.create({
+                trigger: elem,
+                start: "top 80%",
+                end: "bottom 20%",
+                onEnter: function () {
+                    gsap.fromTo(elem, { y: 100, autoAlpha: 0 }, {
+                        duration: 1.25,
+                        y: 0,
+                        autoAlpha: 1,
+                        ease: "back",
+                        overwrite: "auto"
+                    });
+                },
+                onLeave: function () {
+                    gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+                },
+                onEnterBack: function () {
+                    gsap.fromTo(elem, { y: -100, autoAlpha: 0 }, {
+                        duration: 1.25,
+                        y: 0,
+                        autoAlpha: 1,
+                        ease: "back",
+                        overwrite: "auto"
+                    });
+                },
+                onLeaveBack: function () {
+                    gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+                }
+            });
+        });
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const sideNav = document.getElementById('side-nav');
+
+        menuBtn.addEventListener('click', () => {
+            sideNav.style.left = '0';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sideNav.style.left = '-100%';
+        });
+    </script>
+</body>
+
+</html>
