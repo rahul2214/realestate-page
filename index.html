@@ -340,22 +340,23 @@
                 <p>Email: srinipropertyservices@gmail.com</p>
             </div>
             <div class="contact-form">
-                <form>
-                    <div class="form-row">
-                        <input type="text" placeholder="First Name" required>
-                        <input type="text" placeholder="Last Name" required>
-                    </div>
-                    <div class="form-row">
-                        <input type="email" placeholder="Email" required>
-                    </div>
-                    <div class="form-row">
-                        <textarea placeholder="Enter any specific requirements"></textarea>
-                    </div>
-                    <div class="form-row">
-                        <textarea placeholder="Message" required></textarea>
-                    </div>
-                    <button type="submit">Submit</button>
-                </form>
+                <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="67acaa7b-291e-47af-b6df-2b437447e786">
+        <div class="form-row">
+            <input type="text" name="firstName" placeholder="First Name" required>
+            <input type="text" name="lastName" placeholder="Last Name" required>
+        </div>
+        <div class="form-row">
+            <input type="number" name="phoneNumber" placeholder="Phone Number" required>
+        </div>
+        <div class="form-row">
+            <textarea name="specificRequirements" placeholder="Enter any specific requirements"></textarea>
+        </div>
+        <div class="form-row">
+            <textarea name="message" placeholder="Message" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
             </div>
         </div>
     </div>
