@@ -878,13 +878,13 @@ button.submit-btn:hover {
 .contact-section {
     padding: 50px;
     text-align: center;
-    background-color: #1f2937;
+/*     background-color: #1f2937; */
 }
 
 .contact-header h2 {
     font-size: 2.5em;
     margin: 10px 0 50px;
-    color: #f2f2f2;
+     color: #2b3e50; 
 }
 
 
@@ -906,7 +906,13 @@ button.submit-btn:hover {
 .office-info h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
+     color: #2b3e50; 
 }
+.office-info p {
+    
+  color:#000;
+}
+
 
 .contact-form form {
     display: flex;
@@ -1009,6 +1015,9 @@ textarea {
 }
 
 @media (max-width: 480px) {
+      .contact-section {
+    padding: 30px;
+}
     .about-section {
         padding: 10px;
         margin: 10px;
