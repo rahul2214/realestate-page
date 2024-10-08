@@ -1022,6 +1022,12 @@ textarea {
    
     gap: 0px;
 }
+    .office-info {
+    flex: 1 1 210px;
+}
+    .office-info p {
+  margin-bottom:0px;
+}
     .about-section {
         padding: 10px;
         margin: 10px;
